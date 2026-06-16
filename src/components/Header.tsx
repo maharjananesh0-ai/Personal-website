@@ -86,16 +86,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Call CTA Button */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="tel:9801226577"
-              className="flex items-center gap-2 bg-accent hover:bg-accent-hover text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition-all duration-200 shadow-sm"
-            >
-              <Phone className="w-4 h-4 fill-slate-950" />
-              <span>9801226577</span>
-            </a>
-          </div>
+
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden">
@@ -138,15 +129,7 @@ export default function Header() {
               </Link>
             );
           })}
-          <div className="pt-4 pb-2 border-t border-slate-800 px-3">
-            <a
-              href="tel:9801226577"
-              className="flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-slate-950 font-bold py-3 px-4 rounded-lg text-base transition-colors"
-            >
-              <Phone className="w-5 h-5 fill-slate-950" />
-              <span>Call 9801226577</span>
-            </a>
-          </div>
+
         </div>
       </div>
     </header>
