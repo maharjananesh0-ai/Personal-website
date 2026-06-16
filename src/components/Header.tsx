@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Compass } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -44,17 +45,20 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between min-h-[7rem] py-2">
           {/* Logo and Tagline */}
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-accent text-primary p-2 rounded-lg group-hover:bg-accent-hover transition-colors">
-                <Compass className="w-6 h-6 stroke-[2]" />
+            <Link href="/" className="flex items-center gap-3 group" title="Return to Homepage">
+              <div className="relative w-[22rem] h-28 transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1 group-active:scale-95">
+                <Image 
+                  src="/logo.svg" 
+                  alt="Griha Sansar Logo - Return to Homepage" 
+                  fill
+                  className="object-contain object-left drop-shadow-sm"
+                  priority
+                />
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-white group-hover:text-accent transition-colors">
-                  GRIHA SANSAR
-                </span>
+              <div className="flex flex-col justify-center hidden lg:flex transition-opacity duration-300 group-hover:opacity-80">
                 <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold">
                   Design. Approve. Build.
                 </span>

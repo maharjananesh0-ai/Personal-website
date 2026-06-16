@@ -3,7 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mail, Phone, MapPin, Compass, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,18 +22,18 @@ export default function Footer() {
           
           {/* Column 1: Brand Info */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="bg-accent text-primary p-2 rounded-lg">
-                <Compass className="w-6 h-6 stroke-[2]" />
+            <Link href="/" className="flex flex-col gap-2">
+              <div className="relative w-64 h-20">
+                <Image 
+                  src="/logo.svg" 
+                  alt="Griha Sansar Logo" 
+                  fill
+                  className="object-contain object-left"
+                />
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-white">
-                  GRIHA SANSAR
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold">
-                  Design. Approve. Build.
-                </span>
-              </div>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold mt-1">
+                Design. Approve. Build.
+              </span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Griha Sansar Pvt. Ltd. is a premier civil engineering and interior design company based in Kathmandu. 
