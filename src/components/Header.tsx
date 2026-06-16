@@ -45,11 +45,11 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-[7rem] py-2">
+        <div className="flex items-center justify-between min-h-[5rem] py-1">
           {/* Logo and Tagline */}
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-3 group" title="Return to Homepage">
-              <div className="relative w-[22rem] h-28 transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1 group-active:scale-95">
+              <div className="relative w-[16rem] h-16 transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1 group-active:scale-95">
                 <Image 
                   src="/logo.svg" 
                   alt="Griha Sansar Logo - Return to Homepage" 
