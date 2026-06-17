@@ -73,9 +73,14 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Header Banner */}
-      <section className="bg-slate-900 text-white py-16 border-b border-slate-800 relative">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <section className="relative bg-primary text-white py-20 border-b border-primary/50 overflow-hidden">
+        {/* Background Image with Luminosity blend to adopt brand colors */}
+        <div className="absolute inset-0 bg-[url('/images/blueprint_bg.png')] bg-cover bg-center bg-no-repeat mix-blend-luminosity opacity-40"></div>
+        {/* Color Grading Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-emerald-900/40"></div>
+        {/* AutoCAD Gridlines */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Our Completed Projects</h1>
           <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
             Take a look at our engineering blueprints, legal approvals, and completed design works across the Kathmandu Valley.

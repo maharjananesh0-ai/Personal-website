@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const NAV_LINKS = [
@@ -40,44 +40,40 @@ export default function Header() {
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-md py-3"
-          : "bg-slate-900/90 backdrop-blur-sm border-b border-slate-800/50 py-4"
+          ? "bg-white/80 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-[5rem] py-1">
-          {/* Logo and Tagline */}
-          <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-3 group" title="Return to Homepage">
-              <div className="relative w-[16rem] h-16 transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1 group-active:scale-95">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center group">
+              <div className="relative w-[17.6rem] h-[4.4rem] group-hover:scale-105 transition-transform duration-300">
                 <Image 
                   src="/logo.svg" 
-                  alt="Griha Sansar Logo - Return to Homepage" 
+                  alt="Griha Sansar Logo" 
                   fill
-                  className="object-contain object-left drop-shadow-sm"
+                  className="object-contain object-left"
                   priority
                 />
-              </div>
-              <div className="flex flex-col justify-center hidden lg:flex transition-opacity duration-300 group-hover:opacity-80">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-semibold">
-                  Design. Approve. Build.
-                </span>
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1 lg:space-x-2">
+          {/* Center Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-6">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`uppercase text-[13px] xl:text-[14px] font-bold tracking-wider transition-all duration-300 px-3 xl:px-4 py-1.5 whitespace-nowrap ${
                     isActive
-                      ? "text-accent bg-slate-800"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                      ? "text-primary scale-110"
+                      : "text-slate-500 hover:text-primary hover:scale-110"
                   }`}
                 >
                   {link.label}
@@ -86,15 +82,19 @@ export default function Header() {
             })}
           </nav>
 
-
+          {/* Right Section: Contact */}
+          <div className="hidden lg:flex items-center gap-6">
+            <a href="tel:9849277960" className="text-[14px] font-semibold text-slate-600 hover:text-primary transition-colors">
+              Call Us: +977-9849277960
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none"
-              aria-controls="mobile-menu"
+              className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-slate-100 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -106,12 +106,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-screen border-b border-slate-800 bg-slate-900" : "max-h-0"
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-white shadow-lg ${
+          isOpen ? "max-h-[400px] border-b border-slate-100" : "max-h-0"
         }`}
-        id="mobile-menu"
       >
-        <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+        <div className="px-4 pt-2 pb-6 space-y-2">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -119,17 +118,21 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${
+                className={`block px-4 py-3 rounded-lg text-base font-bold ${
                   isActive
-                    ? "text-accent bg-slate-800"
-                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                    ? "text-primary bg-slate-50"
+                    : "text-slate-500 hover:text-primary hover:bg-slate-50"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-
+          <div className="pt-4 border-t border-slate-100 mt-4 flex flex-col gap-3 px-4">
+             <a href="tel:9849277960" className="text-sm font-semibold text-slate-600">
+              Call Us: +977-9849277960
+            </a>
+          </div>
         </div>
       </div>
     </header>

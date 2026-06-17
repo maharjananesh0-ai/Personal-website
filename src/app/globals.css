@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #F8F6F0;
+  --foreground: #111111;
   
-  --primary: #0f294a;
-  --primary-hover: #091b33;
-  --accent: #c59341;
-  --accent-hover: #a3752e;
+  --primary: #1A1D1A;
+  --primary-hover: #0f110f;
+  --accent: #D4F06D;
+  --accent-hover: #bde04b;
   --secondary: #475569;
   
   --card-bg: #ffffff;
@@ -59,4 +59,29 @@ body {
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Global hyperlink hover shadow */
+a {
+  transition: filter 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* Page Transition Animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-appear {
+  animation: appear 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

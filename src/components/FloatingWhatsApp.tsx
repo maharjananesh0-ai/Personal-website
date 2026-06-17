@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function FloatingWhatsApp() {
   const pathname = usePathname();
-  const whatsappUrl = "https://wa.me/9779801226577?text=Hello%20Griha%20Sansar%20Pvt.%20Ltd.,%20I%20would%20like%20to%20inquire%20about%20your%20services.";
+  const whatsappUrl = "https://wa.me/9779849277960?text=Hello%20Griha%20Sansar%20Pvt.%20Ltd.,%20I%20would%20like%20to%20inquire%20about%20your%20services.";
 
   if (pathname === "/marketing-digital") {
     return null;

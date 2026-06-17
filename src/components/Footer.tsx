@@ -15,8 +15,16 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-900">
-      {/* Top Footer Section */}
+    <footer className="relative bg-primary text-slate-400 border-t border-primary overflow-hidden">
+      {/* Background Image with Luminosity blend to adopt brand colors */}
+      <div className="absolute inset-0 bg-[url('/images/blueprint_bg.png')] bg-cover bg-center bg-no-repeat mix-blend-luminosity opacity-30"></div>
+      {/* Color Grading Gradient Overlay (slightly darker for footer) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-emerald-950/80"></div>
+      {/* AutoCAD Gridlines */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+      
+      <div className="relative z-10">
+        {/* Top Footer Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
@@ -39,7 +47,7 @@ export default function Footer() {
               Griha Sansar Pvt. Ltd. is a premier civil engineering and interior design company based in Kathmandu. 
               We bring 10+ years of structural stability, design excellence, and legal approval expertise to your building projects.
             </p>
-            <div className="flex items-center gap-2 text-xs bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 w-fit">
+            <div className="flex items-center gap-2 text-xs bg-black/40 border border-white/10 backdrop-blur-sm rounded-lg p-3 text-slate-200 w-fit">
               <ShieldCheck className="w-5 h-5 text-accent flex-shrink-0" />
               <span>Registered Civil Engineering Company</span>
             </div>
@@ -108,7 +116,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="tel:9801226577" className="hover:text-white transition-colors">9801226577</a>
+                <a href="tel:9849277960" className="hover:text-white transition-colors">+977-9849277960</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
@@ -121,13 +129,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright Section */}
-      <div className="bg-slate-950 border-t border-slate-900 py-6">
+      <div className="bg-black/20 border-t border-white/5 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>&copy; {currentYear} Griha Sansar Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
+        </div>
         </div>
       </div>
     </footer>

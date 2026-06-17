@@ -54,9 +54,14 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Header Banner */}
-      <section className="bg-slate-900 text-white py-16 border-b border-slate-800 relative">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <section className="relative bg-primary text-white py-20 border-b border-primary/50 overflow-hidden">
+        {/* Background Image with Luminosity blend to adopt brand colors */}
+        <div className="absolute inset-0 bg-[url('/images/blueprint_bg.png')] bg-cover bg-center bg-no-repeat mix-blend-luminosity opacity-40"></div>
+        {/* Color Grading Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-emerald-900/40"></div>
+        {/* AutoCAD Gridlines */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Contact Us</h1>
           <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
             Get in touch with our civil engineers to discuss municipal Naksa Pass filings, property valuations, or structural designs.
@@ -82,35 +87,35 @@ export default function ContactPage() {
               <div className="space-y-6">
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-white border border-slate-200 p-3.5 rounded-xl shadow-sm text-accent">
+                  <div className="bg-slate-100 border border-slate-200 p-3.5 rounded-xl shadow-sm text-emerald-600 drop-shadow-sm">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-950 text-sm">Our Address</h3>
                     <p className="text-xs text-slate-600 mt-1">Sohrakhutte, Kathmandu, Nepal</p>
-                    <span className="text-[10px] text-slate-400 font-semibold block uppercase mt-0.5">Service Area: Kathmandu Valley</span>
+                    <span className="text-[11px] text-slate-400 font-semibold block uppercase mt-0.5">Service Area: Kathmandu Valley</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-white border border-slate-200 p-3.5 rounded-xl shadow-sm text-accent">
+                  <div className="bg-slate-100 border border-slate-200 p-3.5 rounded-xl shadow-sm text-emerald-600 drop-shadow-sm">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-950 text-sm">Call/WhatsApp</h3>
-                    <p className="text-xs text-slate-600 mt-1">Phone: <a href="tel:9801226577" className="hover:underline font-bold">9801226577</a></p>
-                    <p className="text-xs text-slate-600">WhatsApp: <a href="https://wa.me/9779801226577" target="_blank" rel="noreferrer" className="hover:underline font-bold">9801226577</a></p>
+                    <p className="text-xs text-slate-600 mt-1">Phone: <a href="tel:9849277960" className="hover:underline font-bold">+977-9849277960</a></p>
+                    <p className="text-xs text-slate-600">WhatsApp: <a href="https://wa.me/9779849277960" target="_blank" rel="noreferrer" className="hover:underline font-bold">+977-9849277960</a></p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-white border border-slate-200 p-3.5 rounded-xl shadow-sm text-accent">
+                  <div className="bg-slate-100 border border-slate-200 p-3.5 rounded-xl shadow-sm text-emerald-600 drop-shadow-sm">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-950 text-sm">Email Address</h3>
                     <p className="text-xs text-slate-600 mt-1"><a href="mailto:grihasansar@gmail.com" className="hover:underline font-bold">grihasansar@gmail.com</a></p>
-                    <span className="text-[10px] text-slate-400 font-semibold block uppercase mt-0.5">Inquiries answered in 24 hours</span>
+                    <span className="text-[11px] text-slate-400 font-semibold block uppercase mt-0.5">Inquiries answered in 24 hours</span>
                   </div>
                 </div>
 
@@ -120,19 +125,22 @@ export default function ContactPage() {
               <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-sm bg-white p-6 space-y-4">
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-slate-500 font-mono flex items-center gap-1.5">
-                    <Compass className="w-4 h-4 text-accent animate-spin-slow" /> OFFICE LOCATION MAP
+                    <Compass className="w-4 h-4 text-emerald-600 drop-shadow-sm animate-spin-slow" /> OFFICE LOCATION MAP
                   </span>
-                  <span className="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded text-[10px] font-bold">Sohrakhutte</span>
+                  <span className="bg-slate-200 text-slate-700 px-2.5 py-0.5 rounded text-[11px] font-bold">Sohrakhutte</span>
                 </div>
                 {/* Visual Representation of Map layout */}
-                <div className="bg-slate-900 h-40 rounded-xl flex flex-col items-center justify-center relative text-center px-4">
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:1rem_1rem] opacity-20"></div>
-                  <MapPin className="w-8 h-8 text-accent animate-bounce" />
-                  <span className="text-xs font-bold text-white mt-2">Griha Sansar Pvt. Ltd.</span>
-                  <span className="text-[10px] text-slate-400">Sohrakhutte Chowk, Kathmandu</span>
+                <div className="bg-slate-100 h-64 rounded-xl overflow-hidden relative">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=27%C2%B043'23.3%22N%2085%C2%B018'34.8%22E&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    className="w-full h-full border-0"
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <ShieldCheck className="w-4 h-4 text-accent flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 drop-shadow-sm flex-shrink-0" />
                   <span>Located next to the central bus terminal road, Sohrakhutte.</span>
                 </div>
               </div>
@@ -171,7 +179,7 @@ export default function ContactPage() {
                         id="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="9801226577"
+                        placeholder="+977-9849277960"
                         className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-slate-900 placeholder-slate-400"
                         required
                       />
@@ -238,7 +246,7 @@ export default function ContactPage() {
                   {status.success && (
                     <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-lg text-xs font-medium space-y-1">
                       <p className="font-bold text-sm">Thank You!</p>
-                      <p>Your inquiry has been successfully sent. Er. Sunil or Er. Anesh will contact you within 24 hours.</p>
+                      <p>Your inquiry has been successfully sent. Er. Anesh Maharjan will contact you within 24 hours.</p>
                     </div>
                   )}
 
