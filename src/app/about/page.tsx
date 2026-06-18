@@ -130,6 +130,18 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Finance Director */}
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
+              <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
+                <Users className="w-10 h-10" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-950 text-base">Mrs. Alina Maharjan</h3>
+                <p className="text-xs text-emerald-600 font-bold uppercase tracking-wider mt-1">Finance Director</p>
+                <p className="text-xs text-slate-500 mt-2">Handles financial planning, project budgeting, and fiscal operations.</p>
+              </div>
+            </div>
+
             {/* Engineer 2 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
               <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">

@@ -75,9 +75,6 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-accent transition-colors">Get a Quote</Link>
               </li>
-              <li>
-                <Link href="/marketing-digital" className="hover:text-accent transition-colors">Guía de Marketing</Link>
-              </li>
             </ul>
           </div>
 

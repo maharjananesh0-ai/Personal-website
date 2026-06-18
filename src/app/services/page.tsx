@@ -128,22 +128,31 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Call to Action Banner */}
-      <section className="bg-slate-950 py-16 text-white text-center border-t border-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold">Need Assistance with Kathmandu Municipality Naksa Pass or Construction?</h2>
-          <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+      <section className="relative py-20 text-center overflow-hidden border-t border-slate-200 bg-transparent">
+        {/* Large blurred colorful blobs for vibrancy on light background */}
+        <div className="absolute -top-1/2 -left-1/4 w-[600px] h-[600px] bg-accent/30 rounded-full filter blur-[120px] pointer-events-none"></div>
+        <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-emerald-300/20 rounded-full filter blur-[120px] pointer-events-none" style={{ animationDelay: "3s" }}></div>
+        
+        {/* AutoCAD Gridlines to keep the engineering theme */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.01)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-60"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight" style={{ textShadow: "0 2px 10px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1)" }}>
+            Need Assistance with Kathmandu Municipality Naksa Pass or Construction?
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.05)" }}>
             Get professional engineering consultations today. Our certified civil engineers will review your files and blueprints at our Sohrakhutte office.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-2">
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
               href="tel:9849277960"
-              className="bg-accent text-slate-900 font-bold py-3.5 px-6 rounded-xl hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-2 drop-shadow-sm"
+              className="bg-slate-900 text-accent font-extrabold py-4 px-8 rounded-xl hover:scale-105 hover:bg-slate-800 transition-all flex items-center justify-center gap-2 shadow-lg shadow-slate-900/10 cursor-pointer"
             >
               <PhoneCall className="w-4 h-4" /> Call for Support
             </a>
             <Link
               href="/contact"
-              className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors"
+              className="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-sm"
             >
               Request a Consultation
             </Link>

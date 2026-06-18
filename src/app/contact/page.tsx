@@ -11,7 +11,7 @@ export default function ContactPage() {
     service: "Architectural Design",
     message: ""
   });
-  
+
   const [status, setStatus] = useState({
     submitting: false,
     success: false,
@@ -73,7 +73,7 @@ export default function ContactPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
+
             {/* Contact Information Column */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
               {/* Coordinates List */}
               <div className="space-y-6">
-                
+
                 <div className="flex items-start gap-4">
                   <div className="bg-slate-100 border border-slate-200 p-3.5 rounded-xl shadow-sm text-emerald-600 drop-shadow-sm">
                     <MapPin className="w-6 h-6" />
@@ -131,11 +131,11 @@ export default function ContactPage() {
                 </div>
                 {/* Visual Representation of Map layout */}
                 <div className="bg-slate-100 h-64 rounded-xl overflow-hidden relative">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=27%C2%B043'23.3%22N%2085%C2%B018'34.8%22E&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                  <iframe
+                    src="https://maps.google.com/maps?q=27%C2%B043'23.3%22N%2085%C2%B018'34.8%22E&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     className="w-full h-full border-0"
-                    allowFullScreen 
-                    loading="lazy" 
+                    allowFullScreen
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-                  
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <label htmlFor="fullName" className="block text-xs font-bold text-slate-700 uppercase tracking-wider">Full Name <span className="text-red-500">*</span></label>
