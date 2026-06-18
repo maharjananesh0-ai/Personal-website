@@ -52,7 +52,7 @@ export default function Header() {
             <Link href="/" className="flex items-center group">
               <div className="relative w-[17.6rem] h-[4.4rem] group-hover:scale-105 transition-transform duration-300">
                 <Image 
-                  src="/logo.svg" 
+                  src="/Grihasansar.png" 
                   alt="Griha Sansar Logo" 
                   fill
                   className="object-contain object-left"

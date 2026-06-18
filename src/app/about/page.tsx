@@ -116,7 +116,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Engineer 1 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
@@ -125,12 +125,24 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="font-bold text-slate-950 text-base">Er. Anesh Maharjan</h3>
-                <p className="text-xs text-emerald-600 font-bold uppercase tracking-wider mt-1">Senior Structural Engineer</p>
-                <p className="text-xs text-slate-500 mt-2">12+ years experience in earthquake resistant concrete & steel design.</p>
+                <p className="text-xs text-emerald-600 font-bold uppercase tracking-wider mt-1">Project Construction Manager</p>
+                <p className="text-xs text-slate-500 mt-2">12+ years civil and interior engineering experience.</p>
               </div>
             </div>
 
             {/* Engineer 2 */}
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
+              <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
+                <Users className="w-10 h-10" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-950 text-base">Er. Pramila Dhaubanjar</h3>
+                <p className="text-xs text-emerald-600 font-bold uppercase tracking-wider mt-1">Senior Structural Engineer</p>
+                <p className="text-xs text-slate-500 mt-2">Specialized in earthquake-resistant structural analysis and concrete design.</p>
+              </div>
+            </div>
+
+            {/* Engineer 3 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
               <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
                 <Users className="w-10 h-10" />
@@ -142,7 +154,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Engineer 3 */}
+            {/* Engineer 4 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
               <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
                 <Users className="w-10 h-10" />
@@ -154,7 +166,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Engineer 4 */}
+            {/* Engineer 5 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
               <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
                 <Users className="w-10 h-10" />
@@ -166,7 +178,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Designer 5 */}
+            {/* Designer 6 */}
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm text-center space-y-4 group hover:border-accent transition-colors">
               <div className="w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto border border-slate-200 group-hover:bg-slate-900 group-hover:text-accent transition-colors">
                 <Users className="w-10 h-10" />

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { 
   ArrowUpRight,
-  Play,
   ArrowRight,
   Building2,
   Paintbrush,
@@ -53,19 +52,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Stats & Video block at bottom of right col */}
+              {/* Stats block at bottom of right col */}
               <div className="flex flex-wrap items-center gap-8 pt-12 border-t border-slate-200">
                 <div className="flex items-baseline gap-3">
                   <span className="text-6xl font-extrabold text-accent">10<span className="text-4xl">+</span></span>
                   <span className="text-sm font-bold text-primary max-w-[80px] leading-tight">years of experiences</span>
                 </div>
-                
-                <button className="flex items-center gap-3 bg-primary text-white pl-4 pr-6 py-3 rounded-full hover:bg-slate-800 transition-colors group">
-                  <span className="bg-white/10 p-2 rounded-full group-hover:bg-accent group-hover:text-primary transition-colors">
-                    <Play className="w-4 h-4 fill-current" />
-                  </span>
-                  <span className="text-sm font-semibold">Watch</span>
-                </button>
               </div>
 
             </div>
@@ -165,14 +157,14 @@ export default function Home() {
       {/* 3. DARK STATS SECTION */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         {/* Subtle Background Image */}
-        <div className="absolute inset-0 opacity-10">
-          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" alt="Cityscape" />
+        <div className="absolute inset-0 opacity-60 overflow-hidden">
+          <img src="/images/kathmandu_construction.png" className="w-full h-full object-cover blur-[3px] scale-105" alt="Kathmandu Valley Construction" />
         </div>
         
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-accent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-accent" style={{ textShadow: "0 4px 16px rgba(0,0,0,0.95)" }}>
               www.GrihaSansar.com.np
             </h2>
           </div>
@@ -181,38 +173,38 @@ export default function Home() {
             
             {/* Stat 1 */}
             <div className="space-y-2">
-              <div className="flex justify-center md:justify-start items-baseline gap-1">
+              <div className="flex justify-center md:justify-start items-baseline gap-1" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.95)" }}>
                 <span className="text-5xl lg:text-7xl font-extrabold">10</span>
                 <span className="text-4xl lg:text-5xl font-bold text-accent">+</span>
               </div>
-              <p className="text-slate-400 text-sm font-semibold">Completed projects</p>
+              <p className="text-slate-200 text-sm font-bold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.95)" }}>Completed projects</p>
             </div>
 
             {/* Stat 2 */}
             <div className="space-y-2 md:mt-16">
-              <div className="flex justify-center md:justify-start items-baseline gap-1">
+              <div className="flex justify-center md:justify-start items-baseline gap-1" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.95)" }}>
                 <span className="text-5xl lg:text-7xl font-extrabold">100</span>
                 <span className="text-4xl lg:text-5xl font-bold text-accent">%</span>
               </div>
-              <p className="text-slate-400 text-sm font-semibold">Naksa Pass Approval</p>
+              <p className="text-slate-200 text-sm font-bold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.95)" }}>Naksa Pass Approval</p>
             </div>
 
             {/* Stat 3 */}
             <div className="space-y-2 md:-mt-12">
-              <div className="flex justify-center md:justify-start items-baseline gap-1">
+              <div className="flex justify-center md:justify-start items-baseline gap-1" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.95)" }}>
                 <span className="text-5xl lg:text-7xl font-extrabold">4</span>
                 <span className="text-4xl lg:text-5xl font-bold text-accent">+</span>
               </div>
-              <p className="text-slate-400 text-sm font-semibold">Civil Engineers</p>
+              <p className="text-slate-200 text-sm font-bold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.95)" }}>Civil Engineers</p>
             </div>
 
             {/* Stat 4 */}
             <div className="space-y-2 md:mt-8">
-              <div className="flex justify-center md:justify-start items-baseline gap-1">
+              <div className="flex justify-center md:justify-start items-baseline gap-1" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.95)" }}>
                 <span className="text-5xl lg:text-7xl font-extrabold">10</span>
                 <span className="text-4xl lg:text-5xl font-bold text-accent">+</span>
               </div>
-              <p className="text-slate-400 text-sm font-semibold">Years Experience</p>
+              <p className="text-slate-200 text-sm font-bold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.95)" }}>Years Experience</p>
             </div>
 
           </div>

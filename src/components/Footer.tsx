@@ -33,7 +33,7 @@ export default function Footer() {
             <Link href="/" className="flex flex-col gap-2">
               <div className="relative w-64 h-20">
                 <Image 
-                  src="/logo.svg" 
+                  src="/Grihasansar-light.png" 
                   alt="Griha Sansar Logo" 
                   fill
                   className="object-contain object-left"
