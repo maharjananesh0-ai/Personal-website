@@ -11,12 +11,10 @@ import {
   CheckCircle2, 
   Phone, 
   MessageSquare, 
-  ShieldCheck, 
   HardHat, 
   FileSpreadsheet, 
   Building, 
   Sparkles, 
-  ArrowRight,
   ArrowUpRight,
   LayoutGrid,
   FileCheck,
@@ -492,8 +490,8 @@ export default function ServicesPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
                     activeCategory === cat.id
-                      ? "bg-[#FF6B00] text-white border-[#FF6B00] shadow-lg shadow-[#FF6B00]/25 transform scale-105"
-                      : "bg-slate-900/60 text-slate-300 border-slate-800 hover:border-[#FF6B00] hover:text-[#FF6B00]"
+                      ? "bg-[#FAF9F6] text-[#070F1E] border-[#FAF9F6] shadow-lg shadow-white/10 transform scale-105"
+                      : "bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:border-[#FAF9F6] hover:text-[#FAF9F6]"
                   }`}
                 >
                   {cat.label}
@@ -700,7 +698,7 @@ export default function ServicesPage() {
 
                     <div className="border-t border-slate-800 pt-8 mb-8">
                       <span className="text-[10px] uppercase font-bold text-[#FF6B00] tracking-widest block mb-4">
-                        What's Included:
+                        What&apos;s Included:
                       </span>
                       <ul className="space-y-3.5">
                         {pkg.features.map((feat, fIdx) => (
