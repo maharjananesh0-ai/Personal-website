@@ -19,7 +19,9 @@ import {
   LayoutGrid,
   FileCheck,
   Eye,
-  Info
+  Info,
+  Calculator,
+  Briefcase
 } from "lucide-react";
 
 // Category type definition
@@ -34,7 +36,7 @@ const CATEGORIES: Category[] = [
   { id: "all", label: "All Services" },
   { id: "design", label: "Design & Planning" },
   { id: "visualization", label: "3D & Walkthroughs" },
-  { id: "construction", label: "Estimation & Supervision" },
+  { id: "construction", label: "Estimation, PMC & Audit" },
   { id: "municipality", label: "Municipality & Approvals" },
 ];
 
@@ -140,6 +142,36 @@ const SERVICES_DATA: Service[] = [
     pricing: "Rs 5,000–15,000 per visit",
     buttonText: "Schedule Visit",
     linkUrl: "https://wa.me/9849277960?text=Hello%20Griha%20Sansar,%20I%20want%20to%20schedule%20an%20engineering%20Site%20Supervision%20visit.",
+  },
+  {
+    id: "bill-audit",
+    title: "Bill Audit & Quantity Verification",
+    category: "construction",
+    icon: Calculator,
+    description: "Independent audit of contractor bills, quantity verification, rate analysis, material reconciliation, and overbilling prevention for construction projects.",
+    pricing: "0.75%–1.5% of bill value",
+    buttonText: "Request Bill Audit",
+    linkUrl: "https://wa.me/9849277960?text=Hello%20Griha%20Sansar,%20I%20am%20interested%20in%20Bill%20Audit%20and%20Quantity%20Verification%20services.",
+    details: [
+      "Fee depends on scope, number of items, site visits and documentation",
+      "Measurement book & bill verification",
+      "Material consumption & rate analysis check"
+    ]
+  },
+  {
+    id: "project-management",
+    title: "Project Management Consultancy (PMC)",
+    category: "construction",
+    icon: Briefcase,
+    description: "Comprehensive end-to-end management of construction projects including timeline scheduling, contractor coordination, quality assurance, and site supervision.",
+    pricing: "Starting from 3% of project cost",
+    buttonText: "Consult PMC Team",
+    linkUrl: "https://wa.me/9849277960?text=Hello%20Griha%20Sansar,%20I%20am%20interested%20in%20Project%20Management%20Consultancy%20(PMC)%20services.",
+    details: [
+      "Final fee depends on project size, duration, site involvement and scope",
+      "Full site timeline & progress management",
+      "Contractor supervision & quality control"
+    ]
   },
   {
     id: "municipality-drawing",
@@ -479,7 +511,7 @@ export default function ServicesPage() {
               Our <span className="text-[#FF6B00] relative inline-block after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[3px] after:bg-[#FF6B00]/40">Engineering Solutions</span>
             </h2>
             <p className="text-slate-400 text-sm max-w-2xl mx-auto font-medium">
-              Select a category to filter our 12 services and discover estimated rates for each milestone of your structural or design process.
+              Select a category to filter our 14 services and discover estimated rates for each milestone of your structural or design process.
             </p>
 
             {/* Filtering Category Tabs */}
@@ -500,7 +532,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* 12 Services Grid (Staggered Floating Order) */}
+          {/* 14 Services Grid (Staggered Floating Order) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 pb-12">
             {filteredServices.map((service, idx) => {
               const Icon = service.icon;
@@ -599,12 +631,18 @@ export default function ServicesPage() {
                         {service.details && (
                           <div className="space-y-1 border-t border-slate-100 pt-2 mb-2 max-h-[85px] overflow-y-auto">
                             <span className="text-[9px] uppercase font-bold text-slate-400 block tracking-wider mb-1 flex items-center gap-1">
-                              <Info className="w-3 h-3 text-[#FF6B00]" /> Cost Tiers
+                              <Info className="w-3 h-3 text-[#FF6B00]" /> Details & Scope Notes
                             </span>
                             {service.details.map((detail, idx) => (
-                              <div key={idx} className="flex justify-between items-center text-[10px] font-semibold text-slate-500">
-                                <span>{detail.split(":")[0]}</span>
-                                <span className="text-slate-800 font-bold">{detail.split(":")[1]}</span>
+                              <div key={idx} className="text-[10px] font-semibold text-slate-600">
+                                {detail.includes(":") ? (
+                                  <div className="flex justify-between items-center">
+                                    <span>{detail.split(":")[0]}</span>
+                                    <span className="text-slate-800 font-bold">{detail.split(":")[1]}</span>
+                                  </div>
+                                ) : (
+                                  <p className="text-slate-500 leading-snug">• {detail}</p>
+                                )}
                               </div>
                             ))}
                           </div>

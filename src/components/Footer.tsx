@@ -83,22 +83,25 @@ export default function Footer() {
             <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-6">Our Services</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/services#architectural-design" className="hover:text-accent transition-colors">Architectural & Structural Design</Link>
+                <Link href="/services#architectural-planning" className="hover:text-accent transition-colors">Architectural & Structural Design</Link>
               </li>
               <li>
-                <Link href="/services#naksa-pass" className="hover:text-accent transition-colors">Naksa Pass & Layout Approval</Link>
+                <Link href="/services#municipality-drawing" className="hover:text-accent transition-colors">Naksa Pass & Layout Approval</Link>
               </li>
               <li>
-                <Link href="/services#sampanna-certificate" className="hover:text-accent transition-colors">Sampanna Certificate & Abhilekhikaran</Link>
+                <Link href="/services#sampanna-support" className="hover:text-accent transition-colors">Sampanna Certificate & Abhilekhikaran</Link>
               </li>
               <li>
-                <Link href="/services#property-valuation" className="hover:text-accent transition-colors">Property Valuation</Link>
+                <Link href="/services#bill-audit" className="hover:text-accent transition-colors">Bill Audit & Quantity Verification</Link>
+              </li>
+              <li>
+                <Link href="/services#project-management" className="hover:text-accent transition-colors">Project Management Consultancy (PMC)</Link>
               </li>
               <li>
                 <Link href="/services#interior-design" className="hover:text-accent transition-colors">Interior Design & Decoration</Link>
               </li>
               <li>
-                <Link href="/services#turnkey-construction" className="hover:text-accent transition-colors">Turnkey Construction & Supervision</Link>
+                <Link href="/services#site-supervision" className="hover:text-accent transition-colors">Turnkey Construction & Supervision</Link>
               </li>
             </ul>
           </div>
